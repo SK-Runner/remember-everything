@@ -2,7 +2,7 @@
 
 ## 1. 文档目标
 
-本文基于《/home/runner/work/remember-everything/remember-everything/doc/产品设计/物品位置记忆APP产品设计说明书》，给出面向 MVP 到可扩展阶段的完整技术选型方案。
+本文基于《../产品设计/物品位置记忆APP产品设计说明书.md》，给出面向 MVP 到可扩展阶段的完整技术选型方案。
 
 本文重点解决以下约束：
 
@@ -304,16 +304,16 @@
 ### 具体建议
 
 1. **语音转写**
-   - 首选：OpenAI 语音转写模型
-   - 备选：Google Speech / Gemini 语音相关能力
+   - 首选：Whisper / `gpt-4o-mini-transcribe` 这类 OpenAI 语音转写能力
+   - 备选：Google Speech-to-Text / Gemini 语音相关能力
 
 2. **文本结构化与更新判断**
-   - 首选：OpenAI 中等成本文本模型
-   - 备选：Gemini Flash 级别模型
+   - 首选：`gpt-4.1-mini` 或 `gpt-4o-mini` 级别模型
+   - 备选：`Gemini 2.5 Flash` 级别模型
 
 3. **图片理解**
-   - 首选：OpenAI 多模态模型
-   - 备选：Gemini 多模态模型
+   - 首选：`gpt-4o` 级别多模态模型
+   - 备选：`Gemini 2.5 Flash` / `Gemini 2.5 Pro` 多模态模型
 
 4. **复杂模糊搜索重排**
    - 首选：轻量文本模型 + 规则重排联合
